@@ -95,6 +95,23 @@ console.log(booleanInteger(1));
 console.log(booleanInteger(2));
 console.log(booleanInteger(5));
 
-function isLoggedInAndSubscribed(`LOGGED_IN`, `SUBSCRIBED`) {
-    if `LOGGED_IN` 
-}
+// ------------ LOGGED IN *AND* SUBSCRIBED ------------
+
+function isLoggedInAndSubscribed(loggedIn, subscribed) {
+    return (loggedIn === `LOGGED_IN`) && (subscribed === `SUBSCRIBED`);
+    }
+
+console.log(isLoggedInAndSubscribed(`LOGGED_IN`, `SUBSCRIBED`));
+console.log(isLoggedInAndSubscribed(`LOGGED_IN`, `UNSUBSCRIBED`));
+console.log(isLoggedInAndSubscribed(`LOGGED_OUT`, `SUBSCRIBED`));   
+
+// ------------ LOGGED IN *OR* SUBSCRIBED ------------
+
+function eitherLoggedInOrSubscribed(logIn, subD) {
+    return (logIn === `LOGGED_IN`) || (subD === `SUBSCRIBED`);
+    }
+
+console.log(eitherLoggedInOrSubscribed(`LOGGED_OUT`, `UNSUBSCRIBED`));
+console.log(eitherLoggedInOrSubscribed(`LOGGED_IN`, `UNSUBSCRIBED`));
+console.log(eitherLoggedInOrSubscribed(`LOGGED_OUT`, `SUBSCRIBED`));  
+
